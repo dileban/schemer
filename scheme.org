@@ -1,0 +1,24 @@
+#+TITLE: Scheme
+#+AUTHOR: Dileban Karunamoorthy
+* Definitions
+** S-Expression
+
+A symbolic expression, or S-expression, sexpr, sexp for short, in the
+Lisp family of languages represents either an atom or a list. 
+
++ Atoms are immutable objects and represent a number or a symbol.
++ Lists represent data or code, and are modifiable (depending on the
+  dialect).
+
+
+** Cons Cells
+
++ Lists are expressed as /cons cells/ in the form =(sexp-1 . sexp-2)=.
++ Cons cells are ordered pairs and thus S-expressions represent binary
+  trees.
++ Cons cells such as =(a . (b . (c . (d . NIL))))= can be written in a
+  more simpler form as (a b c d)
++ NIL or () is a symbol for termination.
+
+
+
