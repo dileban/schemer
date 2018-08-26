@@ -1,24 +1,34 @@
-#+TITLE: Scheme
+#+TITLE: Schemer
 #+AUTHOR: Dileban Karunamoorthy
 * Definitions
 ** S-Expression
 
 A symbolic expression, or S-expression, sexpr, sexp for short, in the
-Lisp family of languages represents either an atom or a list. 
+Lisp family of languages denotes either an atom or a list. 
 
 + Atoms are immutable objects and represent a number or a symbol.
 + Lists represent data or code, and are modifiable (depending on the
   dialect).
 
+When representing code, a list is written in the Polish (prefix)
+notation, where the first s-expression is a /function/ or an
+/operator/.
 
 ** Cons Cells
 
 + Lists are expressed as /cons cells/ in the form =(sexp-1 . sexp-2)=.
-+ Cons cells are ordered pairs and thus S-expressions represent binary
++ Cons cells are ordered pairs and thus S-expressions are binary
   trees.
-+ Cons cells such as =(a . (b . (c . (d . NIL))))= can be written in a
-  more simpler form as (a b c d)
++ Nexted cons cells such as =(a . (b . (c . (d . NIL))))= can be
+  written in a simpler form as (a b c d) - syntactic sugar.
 + NIL or () is a symbol for termination.
 
+Internally, cons cells are represented as linked lists. Each node in
+the list is a single cons cell, where the first S-expression is an
+atom or a list and second S-expression represents an atom or pointer
+to the /next/ cons cell. The list is terminated with NIL.
 
+In the language, we describe a cons cell as consisting of /car/ and a
+/cdr/. The =car= points to the first element in the list and the =cdr=
+points to the rest of the list.
 
