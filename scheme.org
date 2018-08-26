@@ -6,7 +6,7 @@
 A symbolic expression, or S-expression, sexpr, sexp for short, in the
 Lisp family of languages denotes either an atom or a list. 
 
-+ Atoms are immutable objects and represent a number or a symbol.
++ Atoms are immutable objects that represent a number or a symbol.
 + Lists represent data or code, and are modifiable (depending on the
   dialect).
 
@@ -19,16 +19,19 @@ notation, where the first s-expression is a /function/ or an
 + Lists are expressed as /cons cells/ in the form =(sexp-1 . sexp-2)=.
 + Cons cells are ordered pairs and thus S-expressions are binary
   trees.
-+ Nexted cons cells such as =(a . (b . (c . (d . NIL))))= can be
-  written in a simpler form as (a b c d) - syntactic sugar.
-+ NIL or () is a symbol for termination.
++ Nested cons cells such as =(a . (b . (c . (d . NIL))))= can be
+  written in a simpler form as =(a b c d)=.
++ The ordered pair (also called the /dotted pair/ notation) is also
+  referred to as the /internal/ representation, while the simpler list
+  is syntactic sugar and referred to as the /external/ representation.
++ =NIL= or =()= is a symbol for termination.
 
-Internally, cons cells are represented as linked lists. Each node in
-the list is a single cons cell, where the first S-expression is an
+In memory, the cons cells are represented as linked lists. Each node
+in the list is a single cons cell, where the first S-expression is an
 atom or a list and second S-expression represents an atom or pointer
 to the /next/ cons cell. The list is terminated with NIL.
 
-In the language, we describe a cons cell as consisting of /car/ and a
-/cdr/. The =car= points to the first element in the list and the =cdr=
-points to the rest of the list.
+In the language, we describe a cons cell as consisting of two parts,
+the /car/ and a /cdr/. The =car= points to the first element in the
+list and the =cdr= points to the rest of the list.
 
