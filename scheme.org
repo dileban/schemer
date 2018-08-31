@@ -14,7 +14,7 @@ When representing code, a list is written in the Polish (prefix)
 notation, where the first s-expression is a /function/ or an
 /operator/.
 
-** Cons Cells
+** Pairs | Dotted Pairs | Cons Cells
 
 + Lists are expressed as /cons cells/ in the form =(sexp-1 . sexp-2)=.
 + Cons cells are ordered pairs and thus S-expressions are binary
@@ -22,7 +22,7 @@ notation, where the first s-expression is a /function/ or an
 + Nested cons cells such as =(a . (b . (c . (d . NIL))))= can be
   written in a simpler form as =(a b c d)=.
 + The ordered pair (also called the /dotted pair/ notation) is also
-  referred to as the /internal/ representation, while the simpler list
+  referred to as the /internal/ representation, while the simpler form
   is syntactic sugar and referred to as the /external/ representation.
 + =NIL= or =()= is a symbol for termination.
 
@@ -33,5 +33,15 @@ to the /next/ cons cell. The list is terminated with NIL.
 
 In the language, we describe a cons cell as consisting of two parts,
 the /car/ and a /cdr/. The =car= points to the first element in the
-list and the =cdr= points to the rest of the list.
+pair and the =cdr= points to the rest of the list.
 
+The length of a list is the number of dotted pairs in the list. The
+empty list (=NIL= or =()=) has length =0=. The elements in the list
+are all the =car= elements of successive pairs.
+
+Strictly speaking, a pair is a list if 
+
+** Lists and Improper Lists
+
+
+* References
