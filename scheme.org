@@ -49,3 +49,5 @@ list. On the contrary an improper list does not terminate with an
 empty list.
 
 * References
+
++ [[https://icem.folkwang-uni.de/~finnendahl/cm_kurse/doc/schintro/schintro_93.html][Proper and Improper Lists]]
