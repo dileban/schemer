@@ -39,9 +39,13 @@ The length of a list is the number of dotted pairs in the list. The
 empty list (=NIL= or =()=) has length =0=. The elements in the list
 are all the =car= elements of successive pairs.
 
-Strictly speaking, a pair is a list if 
+Strictly speaking, a pair is a list if it is terminated with the empty
+list (=NIL= or =()=).
 
-** Lists and Improper Lists
+** Propert Lists and Improper Lists
 
+A /proper/ list is a sequence of pairs that end with the empty
+list. On the contrary an improper list does not terminate with an
+empty list.
 
 * References
