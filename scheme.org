@@ -48,6 +48,29 @@ A /proper/ list is a sequence of pairs that end with the empty
 list. On the contrary an improper list does not terminate with an
 empty list.
 
+Examples of proper lists:
+
+#+BEGIN_SRC racket
+  ;; The empty list, ()
+  '()
+
+  ;; A list with two elements, (1 2)
+  '(1 2)
+
+  ;; The list (1)
+  (cons 1 '())
+
+  ;; The list (1 2)
+  (cons 1 '(2))
+
+  ;; The list (1 2 3)
+  (cons 1 (cons 2 '(3)))
+
+  ;; The list (4 5 6)
+  (cons 4 (cons 5 (cons 6 '())))
+#+END_SRC
+
+
 * References
 
 + [[https://icem.folkwang-uni.de/~finnendahl/cm_kurse/doc/schintro/schintro_93.html][Proper and Improper Lists]]
