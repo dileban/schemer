@@ -70,6 +70,16 @@ Examples of proper lists:
   (cons 4 (cons 5 (cons 6 '())))
 #+END_SRC
 
+Examples of improper lists:
+
+#+BEGIN_SRC racket
+  ;; The list (1 . 2)
+  (cons 1 2)
+
+  ;; The list (3 . 4)
+  '(3 . 4)
+#+END_SRC
+
 
 * References
 
