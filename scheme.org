@@ -80,6 +80,12 @@ Examples of improper lists:
   '(3 . 4)
 #+END_SRC
 
+** A Recursive Defintion for Lists
+
+The following is a recursive definition for a list:
+
++ An empty list (i.e. =()=)
++ A pair whose =cdr= value is a list
 
 * References
 
