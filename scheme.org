@@ -87,6 +87,34 @@ The following is a recursive definition for a list:
 + An empty list (i.e. =()=)
 + A pair whose =cdr= value is a list
 
+* Toys
+
+** Atoms
+
+#+BEGIN_SRC racket
+  ;;; Atoms
+
+  ;; A strring of characters beginning with a letter
+  'atom
+
+  ;; A special function for declaring an atom
+  (quote atom)
+
+  ;; A string of characters beginning with a letter
+  'turkey
+
+  ;; A string of digits
+  1492
+
+  ;; A single character which is a letter
+  'u 
+
+  ; A string of characters containing both letters and special
+  ; characters other than '(' or ')'
+  '*abc$ 
+#+END_SRC
+
+
 * References
 
 + [[https://icem.folkwang-uni.de/~finnendahl/cm_kurse/doc/schintro/schintro_93.html][Proper and Improper Lists]]
