@@ -109,11 +109,61 @@ The following is a recursive definition for a list:
   ;; A single character which is a letter
   'u 
 
-  ; A string of characters containing both letters and special
-  ; characters other than '(' or ')'
+  ;; A string of characters containing both letters and special
+  ;; characters other than '(' or ')'
   '*abc$ 
 #+END_SRC
 
+** Lists
+
+#+BEGIN_SRC racket
+  ;;; Lists
+
+  ;; An atom enclosed by parenthesis
+  '(atom)
+
+  (quote (atom))
+
+  ;; A collection of atoms enclosed by parenthesis
+  '(atom turkey or)
+
+  (quote (atom turkey or))
+
+  ;; Not a list. Two seperate S-expressions, one is a list the other is
+  ;; an atom
+  '(atom turkey) or
+
+  ;; A list containing a list and an atom. Two S-expressions enclosed in
+  ;; parenthesis. Compare to previous example.
+  '((atom turkey) or)
+
+  ;; All atoms are S-expressions
+  'xyz
+
+  ;; All lists are S-expressions
+  '(x y z)
+
+  '((x y) z)
+
+  ;; A list is a collection of S-expessions enclosed by parenthesis
+  '(how are you doing so far)
+
+  ;; There are 6 S-expressions in the previous example, they are:
+  'how
+  'are
+  'you
+  'doing
+  'so
+  'far
+
+  ;; A list is a collection of S-expessions enclosed by parenthesis
+  '(((how) are)((you) (doing so)) far)
+
+  ;; There are 3 S-expressions in the previous example, they are:
+  '((how) are)
+  '((you) (doing so))
+  'far
+#+END_SRC
 
 * References
 
