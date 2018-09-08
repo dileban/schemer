@@ -163,6 +163,13 @@ The following is a recursive definition for a list:
   '((how) are)
   '((you) (doing so))
   'far
+
+  ;; A list with zero S-expressions. Also called a null or empty list.
+  ;; A null list is not an atom. A null list is an S-expression.
+  '()
+
+  ;; A list of null lists
+  '(() () () ())
 #+END_SRC
 
 * References
