@@ -172,6 +172,42 @@ The following is a recursive definition for a list:
   '(() () () ())
 #+END_SRC
 
+** Car
+
+#+BEGIN_SRC racket
+  ;;; car
+
+  ;; The car of (a b c) is a, the firs atom in the list.
+  (car '(a b c))
+
+  ;; The car of the following list is (a b c), the first S-expression in
+  ;; the list.
+  (car '((a b c) x y z))
+
+  ;; The argument to car must always be a pair. The following is a
+  ;; contract violation.
+  (car 'hotdog)
+
+  ;; The argument to car must always be a pair. The following is a
+  ;; contract violation.
+  (car '())
+#+END_SRC
+
+**The Law of Car**: The primitive /car/ is defined only for non-empty
+lists.
+
+#+BEGIN_SRC racket
+  ;;; car
+
+  ;; The car of the following list is ((hotdocs)), the first
+  ;; S-expression in the list.
+  (car '(((hotdogs)) (and) (pickle) relish))
+
+  ;; The car of the following list is (hotdogs).
+  (car (car '(((hotdogs)) (and))))
+#+END_SRC
+
+
 * References
 
 + [[https://icem.folkwang-uni.de/~finnendahl/cm_kurse/doc/schintro/schintro_93.html][Proper and Improper Lists]]
